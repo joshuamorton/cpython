@@ -1009,7 +1009,10 @@ ast_for_augassign(struct compiling *c, const node *n)
         case '+':
             return Add;
         case '-':
-            return Sub;
+            if (STR(n)[1] == '>')
+                return RShift;
+            else
+                return Sub;
         case '/':
             if (STR(n)[1] == '/')
                 return FloorDiv;

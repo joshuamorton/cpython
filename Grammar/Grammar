@@ -41,7 +41,7 @@ expr_stmt: testlist_star_expr (augassign (yield_expr|testlist) |
                      ('=' (yield_expr|testlist_star_expr))*)
 testlist_star_expr: (test|star_expr) (',' (test|star_expr))* [',']
 augassign: ('+=' | '-=' | '*=' | '@=' | '/=' | '%=' | '&=' | '|=' | '^=' |
-            '<<=' | '>>=' | '**=' | '//=')
+            '<<=' | '>>=' | '**=' | '//=' | '->')
 # For normal assignments, additional restrictions enforced by the interpreter
 del_stmt: 'del' exprlist
 pass_stmt: 'pass'
